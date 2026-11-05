@@ -1,0 +1,432 @@
+/* =========================================================
+   ONBOARDING PAGE
+   Matches the HX Nexus reference screens
+========================================================= */
+
+.onboarding-page {
+  width: 100%;
+  min-width: 0;
+  padding: 0 0 48px;
+  color: #102b3d;
+  background: #f2f5f7;
+  box-sizing: border-box;
+}
+
+.onboarding-page *,
+.onboarding-page *::before,
+.onboarding-page *::after {
+  box-sizing: border-box;
+}
+
+/* Page heading */
+
+.onboarding-heading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+  margin: 0 0 32px;
+}
+
+.onboarding-eyebrow,
+.onboarding-section-label {
+  margin: 0 0 12px;
+  color: #008b80;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.11em;
+}
+
+.onboarding-heading h1 {
+  margin: 0;
+  color: #102b3d;
+  font-size: clamp(30px, 3vw, 38px);
+  line-height: 1.15;
+  font-weight: 750;
+  letter-spacing: -0.045em;
+}
+
+.onboarding-subtitle {
+  margin: 12px 0 0;
+  color: #648096;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.onboarding-profile-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-width: 82px;
+  min-height: 46px;
+  padding: 0 18px;
+  margin-bottom: 2px;
+  border: 1px solid #dce5eb;
+  border-radius: 14px;
+  background: #fff;
+  color: #102b3d;
+  font-size: 14px;
+  font-weight: 700;
+  box-shadow: 0 5px 14px rgba(16, 43, 61, 0.04);
+  cursor: pointer;
+  transition: border-color 0.18s ease, transform 0.18s ease,
+    box-shadow 0.18s ease;
+}
+
+.onboarding-profile-button:hover {
+  border-color: #8fdccd;
+  box-shadow: 0 8px 18px rgba(16, 43, 61, 0.08);
+  transform: translateY(-1px);
+}
+
+/* Progress summary */
+
+.onboarding-progress-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+  min-height: 206px;
+  padding: 28px;
+  margin-bottom: 22px;
+  border: 1px solid #dce5eb;
+  border-radius: 20px;
+  background: #fff;
+  box-shadow: 0 10px 24px rgba(16, 43, 61, 0.045);
+}
+
+.onboarding-progress-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.onboarding-section-label {
+  margin-bottom: 8px;
+  color: #547186;
+  letter-spacing: 0.09em;
+}
+
+.onboarding-progress-content h2 {
+  margin: 0;
+  color: #102b3d;
+  font-size: 20px;
+  line-height: 1.35;
+  font-weight: 750;
+  letter-spacing: -0.025em;
+}
+
+.onboarding-progress-content > p:not(.onboarding-section-label) {
+  margin: 8px 0 0;
+  color: #648096;
+  font-size: 14px;
+}
+
+.onboarding-progress-track {
+  width: 100%;
+  height: 8px;
+  margin-top: 18px;
+  overflow: hidden;
+  border-radius: 99px;
+  background: #e9f0f2;
+}
+
+.onboarding-progress-track span {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, #168b76 0%, #49d9bd 100%);
+  transition: width 0.3s ease;
+}
+
+.onboarding-progress-content .onboarding-done-text {
+  margin-top: 26px !important;
+}
+
+.onboarding-progress-ring {
+  display: grid;
+  flex: 0 0 82px;
+  width: 82px;
+  height: 82px;
+  place-items: center;
+  border: 8px solid #168b76;
+  border-radius: 50%;
+  color: #102b3d;
+  background: #fff;
+  font-size: 16px;
+  font-weight: 800;
+}
+
+/* Onboarding steps */
+
+.onboarding-steps {
+  display: grid;
+  gap: 10px;
+}
+
+.onboarding-step-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  min-height: 90px;
+  padding: 16px 18px;
+  border: 1px solid #dce5eb;
+  border-radius: 19px;
+  background: #fff;
+  box-shadow: 0 7px 18px rgba(16, 43, 61, 0.04);
+}
+
+.onboarding-step-check {
+  display: grid;
+  flex: 0 0 42px;
+  width: 42px;
+  height: 42px;
+  place-items: center;
+  border-radius: 14px;
+  background: #e1f5f0;
+  color: #008b80;
+}
+
+.onboarding-step-copy {
+  flex: 1;
+  min-width: 0;
+  padding-top: 2px;
+}
+
+.onboarding-step-copy h3 {
+  margin: 0;
+  color: #102b3d;
+  font-size: 16px;
+  font-weight: 750;
+  line-height: 1.4;
+  overflow-wrap: anywhere;
+}
+
+.onboarding-step-copy p {
+  margin: 8px 0 0;
+  color: #648096;
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+.onboarding-step-copy .onboarding-step-note {
+  max-width: 620px;
+  margin-top: 8px;
+}
+
+.onboarding-complete-pill {
+  flex: 0 0 auto;
+  padding: 5px 12px;
+  border-radius: 999px;
+  background: #e1f5f0;
+  color: #008b80;
+  font-size: 12px;
+  line-height: 1.4;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.onboarding-footnote {
+  margin: 18px 0 0;
+  color: #7890a0;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+/* Keyboard accessibility */
+
+.onboarding-page button:focus-visible {
+  outline: 2px solid #168b76;
+  outline-offset: 3px;
+}
+
+/* =========================================================
+   DARK MODE
+   Uses the same .app-shell.dark-theme selector as games.css
+========================================================= */
+
+.app-shell.dark-theme .onboarding-page {
+  color: #e6eef2;
+  background: #0b141b;
+}
+
+.app-shell.dark-theme .onboarding-heading h1,
+.app-shell.dark-theme .onboarding-progress-content h2,
+.app-shell.dark-theme .onboarding-step-copy h3 {
+  color: #e8f0f3;
+}
+
+.app-shell.dark-theme .onboarding-eyebrow,
+.app-shell.dark-theme .onboarding-section-label {
+  color: #54d6c0;
+}
+
+.app-shell.dark-theme .onboarding-subtitle,
+.app-shell.dark-theme .onboarding-progress-content > p:not(.onboarding-section-label),
+.app-shell.dark-theme .onboarding-step-copy p,
+.app-shell.dark-theme .onboarding-footnote {
+  color: #9aadb8;
+}
+
+.app-shell.dark-theme .onboarding-profile-button,
+.app-shell.dark-theme .onboarding-progress-card,
+.app-shell.dark-theme .onboarding-step-card {
+  background: #111d26;
+  border-color: #293b46;
+  color: #e6eef2;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.16);
+}
+
+.app-shell.dark-theme .onboarding-profile-button:hover {
+  border-color: #42cbb5;
+}
+
+.app-shell.dark-theme .onboarding-progress-track {
+  background: #293b46;
+}
+
+.app-shell.dark-theme .onboarding-progress-ring {
+  background: #111d26;
+  color: #e8f0f3;
+  border-color: #35bda7;
+}
+
+.app-shell.dark-theme .onboarding-step-check,
+.app-shell.dark-theme .onboarding-complete-pill {
+  background: #173c38;
+  color: #69dfc9;
+}
+
+/* =========================================================
+   RESPONSIVE LAYOUT
+========================================================= */
+
+@media (max-width: 640px) {
+  .onboarding-page {
+    padding-bottom: 30px;
+  }
+
+  .onboarding-heading {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 18px;
+    margin-bottom: 22px;
+  }
+
+  .onboarding-heading h1 {
+    font-size: 30px;
+  }
+
+  .onboarding-subtitle {
+    font-size: 14px;
+  }
+
+  .onboarding-profile-button {
+    min-height: 42px;
+  }
+
+  .onboarding-progress-card {
+    min-height: 0;
+    padding: 20px;
+    gap: 16px;
+    border-radius: 17px;
+  }
+
+  .onboarding-progress-ring {
+    flex-basis: 66px;
+    width: 66px;
+    height: 66px;
+    border-width: 7px;
+    font-size: 14px;
+  }
+
+  .onboarding-progress-content h2 {
+    font-size: 17px;
+  }
+
+  .onboarding-progress-content > p:not(.onboarding-section-label) {
+    font-size: 13px;
+  }
+
+  .onboarding-progress-content .onboarding-done-text {
+    margin-top: 18px !important;
+  }
+
+  .onboarding-step-card {
+    gap: 12px;
+    padding: 14px;
+    border-radius: 16px;
+  }
+
+  .onboarding-step-check {
+    flex-basis: 36px;
+    width: 36px;
+    height: 36px;
+    border-radius: 12px;
+  }
+
+  .onboarding-step-copy h3 {
+    font-size: 14px;
+  }
+
+  .onboarding-step-copy p {
+    font-size: 13px;
+  }
+
+  .onboarding-complete-pill {
+    padding: 4px 9px;
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 420px) {
+  .onboarding-progress-card {
+    align-items: flex-start;
+  }
+
+  .onboarding-progress-ring {
+    flex-basis: 58px;
+    width: 58px;
+    height: 58px;
+    border-width: 6px;
+    font-size: 12px;
+  }
+
+  .onboarding-step-card {
+    flex-wrap: wrap;
+  }
+
+  .onboarding-complete-pill {
+    margin-left: 48px;
+  }
+}
+
+@media (max-width: 360px) {
+  .onboarding-progress-card {
+    gap: 10px;
+    padding: 16px;
+  }
+
+  .onboarding-progress-ring {
+    flex-basis: 50px;
+    width: 50px;
+    height: 50px;
+    border-width: 5px;
+    font-size: 11px;
+  }
+
+  .onboarding-step-card {
+    gap: 10px;
+  }
+
+  .onboarding-complete-pill {
+    margin-left: 46px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .onboarding-profile-button,
+  .onboarding-progress-track span {
+    transition: none;
+  }
+}

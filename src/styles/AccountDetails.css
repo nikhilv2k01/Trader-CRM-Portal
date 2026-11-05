@@ -1,0 +1,1305 @@
+.account-details-page {
+
+  width: 100%;
+
+  min-width: 0;
+
+  padding-bottom: 30px;
+
+}
+
+.account-details-heading {
+
+  display: flex;
+
+  align-items: flex-end;
+
+  justify-content: space-between;
+
+  gap: 24px;
+
+  margin-bottom: 26px;
+
+}
+
+.account-details-heading h1 {
+
+  font-size: 30px;
+
+  font-weight: 700;
+
+  letter-spacing: -1px;
+
+  color: #142d3a;
+
+  margin: 8px 0;
+
+}
+
+.account-details-heading .muted {
+
+  max-width: 650px;
+
+  line-height: 1.7;
+
+  font-size: 13px;
+
+}
+
+.account-detail-actions {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  flex-wrap: wrap;
+
+}
+
+.account-detail-actions button {
+
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 7px;
+
+  white-space: nowrap;
+
+}
+
+/* BALANCE SUMMARY */
+
+.account-detail-summary {
+
+  display: grid;
+
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+
+  gap: 12px;
+
+  margin-bottom: 14px;
+
+}
+
+.account-stat-card {
+
+  background: #ffffff;
+
+  border: 1px solid #dce5e9;
+
+  border-radius: 17px;
+
+  padding: 21px;
+
+  box-shadow: 0 4px 12px rgba(20, 45, 58, 0.04);
+
+  min-width: 0;
+
+}
+
+.account-stat-card small {
+
+  display: block;
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  letter-spacing: 1px;
+
+  color: #6b8494;
+
+}
+
+.account-stat-card h2 {
+
+  font-size: clamp(22px, 2vw, 30px);
+
+  font-weight: 750;
+
+  color: #173547;
+
+  margin: 12px 0 8px;
+
+  overflow-wrap: anywhere;
+
+}
+
+.account-stat-card p {
+
+  font-size: 11px;
+
+  color: #71899a;
+
+}
+
+.account-stat-card.dark-stat {
+
+  background: linear-gradient(135deg, #142127, #1b3534);
+
+  color: #ffffff;
+
+  border-color: transparent;
+
+}
+
+.account-stat-card.dark-stat small,
+
+.account-stat-card.dark-stat h2,
+
+.account-stat-card.dark-stat p {
+
+  color: #ffffff;
+
+}
+
+/* MAIN GRID */
+
+.account-details-grid {
+
+  display: grid;
+
+  grid-template-columns: minmax(0, 1.75fr) minmax(280px, 1fr);
+
+  gap: 14px;
+
+  align-items: start;
+
+}
+
+.account-details-main,
+
+.account-details-sidebar {
+
+  min-width: 0;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 14px;
+
+}
+
+.detail-panel {
+
+  background: #ffffff;
+
+  border: 1px solid #dce5e9;
+
+  border-radius: 17px;
+
+  padding: 20px;
+
+  box-shadow: 0 4px 12px rgba(20, 45, 58, 0.04);
+
+  min-width: 0;
+
+}
+
+.detail-panel-heading {
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: flex-start;
+
+  gap: 12px;
+
+  margin-bottom: 18px;
+
+}
+
+.detail-panel-heading h2,
+
+.detail-panel h2 {
+
+  font-size: 16px;
+
+  font-weight: 700;
+
+  color: #173547;
+
+  margin-top: 6px;
+
+}
+
+.detail-panel-heading > small {
+
+  font-size: 10px;
+
+  color: #78909f;
+
+  text-align: right;
+
+}
+
+.detail-panel .eyebrow {
+
+  font-size: 9px;
+
+  font-weight: 750;
+
+  letter-spacing: 1px;
+
+  color: #648093;
+
+}
+
+/* EQUITY COMPOSITION */
+
+.equity-progress {
+
+  display: flex;
+
+  width: 100%;
+
+  height: 12px;
+
+  overflow: hidden;
+
+  border-radius: 20px;
+
+  background: #edf2f4;
+
+  margin: 22px 0 16px;
+
+}
+
+.equity-progress span {
+
+  height: 100%;
+
+  transition: width 0.3s ease;
+
+}
+
+.margin-progress {
+
+  background: #5968df;
+
+}
+
+.free-progress {
+
+  background: #13a98c;
+
+}
+
+.equity-breakdown {
+
+  display: grid;
+
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+
+  gap: 10px;
+
+}
+
+.equity-breakdown > div {
+
+  background: #f0f4f6;
+
+  border: 1px solid #e0e8eb;
+
+  border-radius: 10px;
+
+  padding: 13px 12px;
+
+  min-width: 0;
+
+}
+
+.equity-breakdown small {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 6px;
+
+  color: #688294;
+
+  font-size: 9px;
+
+  font-weight: 700;
+
+  margin-bottom: 10px;
+
+}
+
+.equity-breakdown strong {
+
+  display: block;
+
+  color: #173547;
+
+  font-size: 14px;
+
+  overflow-wrap: anywhere;
+
+}
+
+.equity-breakdown > div > span {
+
+  display: block;
+
+  font-size: 10px;
+
+  color: #6e8798;
+
+  margin-top: 5px;
+
+}
+
+.dot {
+
+  width: 7px;
+
+  height: 7px;
+
+  border-radius: 50%;
+
+  flex-shrink: 0;
+
+}
+
+.margin-dot {
+
+  background: #168d77;
+
+}
+
+.free-dot {
+
+  background: #a9e7d9;
+
+}
+
+.equity-dot {
+
+  background: #607b89;
+
+}
+
+.detail-description {
+
+  font-size: 10px;
+
+  line-height: 1.7;
+
+  color: #71899a;
+
+  margin-top: 15px;
+
+}
+
+/* MOVEMENT SUMMARY */
+
+.movement-summary {
+
+  display: grid;
+
+  grid-template-columns: repeat(3, minmax(0, 1fr)) minmax(110px, 0.8fr);
+
+  gap: 3px;
+
+  margin-bottom: 12px;
+
+}
+
+.movement-summary > div {
+
+  background: #f0f4f6;
+
+  border: 1px solid #e8edef;
+
+  padding: 12px 10px;
+
+  min-width: 0;
+
+}
+
+.movement-summary > div:first-child {
+
+  border-radius: 10px 0 0 10px;
+
+}
+
+.movement-summary > div:last-child {
+
+  border-radius: 10px;
+
+}
+
+.movement-summary small {
+
+  display: block;
+
+  font-size: 9px;
+
+  font-weight: 700;
+
+  color: #6e8798;
+
+  margin-bottom: 8px;
+
+}
+
+.movement-summary strong {
+
+  display: block;
+
+  font-size: 15px;
+
+  color: #173547;
+
+  overflow-wrap: anywhere;
+
+}
+
+.recorded-count {
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  background: #e6f7f2 !important;
+
+  border-color: #b9e9dc !important;
+
+}
+
+.recorded-count small {
+
+  color: #078873;
+
+  margin: 0;
+
+  text-align: center;
+
+  line-height: 1.5;
+
+}
+
+/* BALANCE CHART */
+
+.balance-chart {
+
+  position: relative;
+
+  background: linear-gradient(110deg, #f0f4f6, #e6f3f1);
+
+  border-radius: 12px;
+
+  padding: 12px 8px 32px;
+
+  margin: 10px 0 16px;
+
+  min-width: 0;
+
+}
+
+.balance-chart-svg {
+
+  display: block;
+
+  width: 100%;
+
+  height: 185px;
+
+  overflow: visible;
+
+}
+
+.chart-label {
+
+  position: absolute;
+
+  left: 12px;
+
+  z-index: 1;
+
+  background: #ffffff;
+
+  color: #71899a;
+
+  border-radius: 4px;
+
+  padding: 3px 5px;
+
+  font-size: 8px;
+
+}
+
+.chart-label-top {
+
+  top: 18px;
+
+}
+
+.chart-label-middle {
+
+  top: 48%;
+
+}
+
+.chart-label-bottom {
+
+  bottom: 38px;
+
+}
+
+.chart-dates {
+
+  position: absolute;
+
+  bottom: 12px;
+
+  left: 12px;
+
+  right: 12px;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  color: #71899a;
+
+  font-size: 9px;
+
+}
+
+/* MOVEMENT HISTORY */
+
+.movement-list {
+
+  display: flex;
+
+  flex-direction: column;
+
+}
+
+.movement-item {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  padding: 13px 3px;
+
+  border-bottom: 1px solid #e8edef;
+
+  min-width: 0;
+
+}
+
+.movement-item:last-child {
+
+  border-bottom: none;
+
+  padding-bottom: 2px;
+
+}
+
+.movement-icon {
+
+  width: 32px;
+
+  height: 32px;
+
+  flex-shrink: 0;
+
+  border-radius: 10px;
+
+  background: #e6f7f2;
+
+  color: #138b78;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+}
+
+.movement-info {
+
+  flex: 1;
+
+  min-width: 0;
+
+}
+
+.movement-info strong {
+
+  display: block;
+
+  color: #173547;
+
+  font-size: 11px;
+
+  margin-bottom: 5px;
+
+}
+
+.movement-info small,
+
+.movement-amount small {
+
+  display: block;
+
+  font-size: 9px;
+
+  color: #78909f;
+
+}
+
+.movement-amount {
+
+  text-align: right;
+
+  flex-shrink: 0;
+
+}
+
+.movement-amount strong {
+
+  font-size: 12px;
+
+  display: block;
+
+  margin-bottom: 5px;
+
+}
+
+/* RIGHT SIDEBAR */
+
+.account-details-sidebar .detail-panel {
+
+  padding: 19px;
+
+}
+
+.account-details-sidebar h2 {
+
+  margin-bottom: 13px;
+
+}
+
+.account-detail-row {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 9px;
+
+  padding: 11px 0;
+
+  border-bottom: 1px solid #e8edef;
+
+  min-width: 0;
+
+}
+
+.account-detail-row:last-child {
+
+  border-bottom: none;
+
+  padding-bottom: 0;
+
+}
+
+.detail-row-icon {
+
+  width: 25px;
+
+  height: 25px;
+
+  flex-shrink: 0;
+
+  background: #f0f4f6;
+
+  border: 1px solid #e0e8eb;
+
+  border-radius: 7px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  color: #71899a;
+
+}
+
+.detail-row-label {
+
+  flex: 1;
+
+  min-width: 0;
+
+  color: #71899a;
+
+  font-size: 10px;
+
+}
+
+.account-detail-row > strong {
+
+  color: #263e4c;
+
+  font-size: 10px;
+
+  text-align: right;
+
+  overflow-wrap: anywhere;
+
+}
+
+.account-detail-row > strong.mono {
+
+  font-family: monospace;
+
+}
+
+.account-detail-row > strong.highlight-value {
+
+  color: #078873;
+
+}
+
+.detail-status {
+
+  display: inline-block;
+
+  padding: 5px 9px;
+
+  border-radius: 20px;
+
+  font-size: 9px;
+
+}
+
+.detail-status.live {
+
+  background: #e1f6ef;
+
+  color: #078873;
+
+}
+
+.detail-status.demo {
+
+  background: #fff3cf;
+
+  color: #977000;
+
+}
+
+/* TRANSFER PARTNERS */
+
+.transfer-partner {
+
+  display: flex;
+
+  width: 100%;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  gap: 10px;
+
+  border: none;
+
+  border-radius: 10px;
+
+  background: #f0f4f6;
+
+  padding: 14px 12px;
+
+  margin-top: 12px;
+
+  cursor: pointer;
+
+  text-align: left;
+
+  transition: background-color 0.2s;
+
+}
+
+.transfer-partner:hover {
+
+  background: #e5f3ef;
+
+}
+
+.transfer-partner strong {
+
+  font-size: 11px;
+
+  color: #173547;
+
+}
+
+.transfer-partner span {
+
+  font-size: 11px;
+
+  color: #71899a;
+
+}
+
+/* PASSWORD */
+
+.password-button {
+
+  width: 100%;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 8px;
+
+  padding: 11px;
+
+  margin: 14px 0 10px;
+
+  border: none;
+
+  border-radius: 9px;
+
+  background: #edf2ef;
+
+  color: #263e4c;
+
+  font-size: 11px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: background-color 0.2s;
+
+}
+
+.password-button:hover {
+
+  background: #dcece5;
+
+}
+
+.password-panel > small {
+
+  font-size: 9px;
+
+  color: #71899a;
+
+}
+
+.account-details-disclaimer {
+
+  margin-top: 18px;
+
+  color: #71899a;
+
+  font-size: 10px;
+
+}
+
+.positive {
+
+  color: #078873 !important;
+
+}
+
+.negative {
+
+  color: #d94739 !important;
+
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1100px) {
+
+  .account-details-grid {
+
+    grid-template-columns: minmax(0, 1.5fr) minmax(250px, 1fr);
+
+  }
+
+  .movement-summary {
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  }
+
+  .movement-summary > div:first-child {
+
+    border-radius: 10px 0 0 0;
+
+  }
+
+  .movement-summary > div:last-child {
+
+    border-radius: 0 0 10px 0;
+
+  }
+
+}
+
+@media (max-width: 850px) {
+
+  .account-details-grid {
+
+    grid-template-columns: 1fr;
+
+  }
+
+  .account-details-sidebar {
+
+    display: grid;
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    align-items: start;
+
+  }
+
+  .password-panel {
+
+    grid-column: 1 / -1;
+
+  }
+
+}
+
+@media (max-width: 600px) {
+
+  .account-details-heading {
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+  }
+
+  .account-details-heading h1 {
+
+    font-size: 25px;
+
+  }
+
+  .account-detail-actions {
+
+    width: 100%;
+
+  }
+
+  .account-detail-actions button {
+
+    flex: 1;
+
+    padding: 10px 8px;
+
+    font-size: 11px;
+
+  }
+
+  .account-detail-summary {
+
+    grid-template-columns: 1fr;
+
+  }
+
+  .account-stat-card {
+
+    padding: 17px;
+
+  }
+
+  .account-stat-card h2 {
+
+    font-size: 25px;
+
+  }
+
+  .detail-panel {
+
+    padding: 15px;
+
+  }
+
+  .equity-breakdown {
+
+    grid-template-columns: 1fr;
+
+  }
+
+  .movement-summary {
+
+    grid-template-columns: 1fr 1fr;
+
+  }
+
+  .movement-summary > div:first-child {
+
+    border-radius: 10px 0 0 0;
+
+  }
+
+  .movement-summary > div:nth-child(2) {
+
+    border-radius: 0 10px 0 0;
+
+  }
+
+  .movement-summary > div:last-child {
+
+    border-radius: 0 0 10px 0;
+
+  }
+
+  .account-details-sidebar {
+
+    grid-template-columns: 1fr;
+
+  }
+
+  .password-panel {
+
+    grid-column: auto;
+
+  }
+
+  .movement-item {
+
+    gap: 8px;
+
+  }
+
+  .movement-info strong {
+
+    font-size: 10px;
+
+  }
+
+  .movement-amount strong {
+
+    font-size: 10px;
+
+  }
+
+  .movement-amount small {
+
+    font-size: 8px;
+
+  }
+
+  .movement-icon {
+
+    width: 29px;
+
+    height: 29px;
+
+  }
+
+  .detail-panel-heading {
+
+    flex-direction: column;
+
+  }
+
+  .detail-panel-heading > small {
+
+    text-align: left;
+
+  }
+
+  .balance-chart-svg {
+
+    height: 145px;
+
+  }
+
+}
+
+/* =========================================================
+   DARK MODE
+   Uses the shared .app-shell.dark-theme class from MainLayout.
+   The sidebar and intentionally dark statistic card keep
+   their existing branded appearance.
+========================================================= */
+
+.app-shell.dark-theme .account-details-page {
+  color: var(--text-primary);
+}
+
+.app-shell.dark-theme .account-details-heading h1,
+.app-shell.dark-theme .account-stat-card h2,
+.app-shell.dark-theme .detail-panel-heading h2,
+.app-shell.dark-theme .detail-panel h2,
+.app-shell.dark-theme .equity-breakdown strong,
+.app-shell.dark-theme .movement-summary strong,
+.app-shell.dark-theme .movement-info strong,
+.app-shell.dark-theme .account-detail-row > strong,
+.app-shell.dark-theme .transfer-partner strong,
+.app-shell.dark-theme .password-button {
+  color: var(--text-primary);
+}
+
+.app-shell.dark-theme .account-details-heading .muted,
+.app-shell.dark-theme .account-stat-card small,
+.app-shell.dark-theme .account-stat-card p,
+.app-shell.dark-theme .detail-panel-heading > small,
+.app-shell.dark-theme .detail-panel .eyebrow,
+.app-shell.dark-theme .equity-breakdown small,
+.app-shell.dark-theme .equity-breakdown > div > span,
+.app-shell.dark-theme .detail-description,
+.app-shell.dark-theme .movement-summary small,
+.app-shell.dark-theme .movement-info small,
+.app-shell.dark-theme .movement-amount small,
+.app-shell.dark-theme .detail-row-label,
+.app-shell.dark-theme .account-details-disclaimer,
+.app-shell.dark-theme .transfer-partner span,
+.app-shell.dark-theme .password-panel > small {
+  color: var(--text-secondary);
+}
+
+.app-shell.dark-theme .account-stat-card:not(.dark-stat),
+.app-shell.dark-theme .detail-panel {
+  background: var(--surface-bg);
+  border-color: var(--border-color);
+  box-shadow: var(--shadow);
+}
+
+.app-shell.dark-theme .equity-breakdown > div,
+.app-shell.dark-theme .movement-summary > div,
+.app-shell.dark-theme .detail-row-icon,
+.app-shell.dark-theme .transfer-partner,
+.app-shell.dark-theme .password-button {
+  background: var(--surface-secondary);
+  border-color: var(--border-color);
+  color: var(--text-primary);
+}
+
+.app-shell.dark-theme .equity-progress {
+  background: var(--surface-secondary);
+}
+
+.app-shell.dark-theme .balance-chart {
+  background: linear-gradient(110deg, var(--surface-secondary), var(--surface-bg));
+  border: 1px solid var(--border-color);
+}
+
+.app-shell.dark-theme .chart-label {
+  background: var(--surface-bg);
+  color: var(--text-secondary);
+}
+
+.app-shell.dark-theme .chart-dates {
+  color: var(--text-secondary);
+}
+
+.app-shell.dark-theme .movement-item,
+.app-shell.dark-theme .account-detail-row {
+  border-color: var(--divider-color);
+}
+
+.app-shell.dark-theme .movement-icon {
+  background: var(--primary-light);
+  color: var(--primary);
+}
+
+.app-shell.dark-theme .recorded-count {
+  background: var(--primary-light) !important;
+  border-color: var(--border-color) !important;
+}
+
+.app-shell.dark-theme .recorded-count small,
+.app-shell.dark-theme .account-detail-row > strong.highlight-value,
+.app-shell.dark-theme .positive {
+  color: var(--primary) !important;
+}
+
+.app-shell.dark-theme .detail-status.live {
+  background: var(--primary-light);
+  color: var(--primary);
+}
+
+.app-shell.dark-theme .detail-status.demo {
+  background: #493b19;
+  color: #f2d27a;
+}
+
+.app-shell.dark-theme .transfer-partner:hover,
+.app-shell.dark-theme .password-button:hover {
+  background: var(--primary-light);
+}
+
+.app-shell.dark-theme .account-stat-card.dark-stat {
+  background: linear-gradient(135deg, #142127, #1b3534);
+  color: #ffffff;
+  border-color: transparent;
+}
+
+.app-shell.dark-theme .account-stat-card.dark-stat small,
+.app-shell.dark-theme .account-stat-card.dark-stat h2,
+.app-shell.dark-theme .account-stat-card.dark-stat p {
+  color: #ffffff;
+}
+
+.app-shell.dark-theme .negative {
+  color: #ff8178 !important;
+}
+
+/* Keep long IDs, amounts and labels from forcing horizontal overflow. */
+.account-details-page,
+.account-details-page * {
+  min-width: 0;
+}
+
+@media (max-width: 420px) {
+  .account-detail-actions button {
+    flex-basis: 100%;
+  }
+
+  .movement-summary {
+    grid-template-columns: 1fr;
+  }
+
+  .movement-summary > div,
+  .movement-summary > div:first-child,
+  .movement-summary > div:nth-child(2),
+  .movement-summary > div:last-child {
+    border-radius: 9px;
+  }
+
+  .movement-item {
+    align-items: flex-start;
+  }
+
+  .movement-amount {
+    max-width: 38%;
+    overflow-wrap: anywhere;
+  }
+}
+
