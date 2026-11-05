@@ -1,12 +1,6 @@
-
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
-import {
-  Copy,
-  Check,
-  Mail,
-  MessageCircle,
-} from "lucide-react";
+import { Copy, Check, Mail, MessageCircle } from "lucide-react";
 import "../styles/Referrals.css";
 
 const referralCode = "HX-ALEX-4821";
@@ -127,9 +121,7 @@ export default function Referrals() {
     <div className="referrals-page">
       {/* Page Heading */}
       <div className="referrals-heading">
-        <p className="referrals-eyebrow">
-          {t("referrals")}
-        </p>
+        <p className="referrals-eyebrow">{t("referrals")}</p>
 
         <h1>{t("share_your_invite")}</h1>
 
@@ -142,9 +134,7 @@ export default function Referrals() {
       <section className="referral-banner">
         {/* Left Section */}
         <div className="referral-main">
-          <p className="referral-label">
-            {t("your_invite_code")}
-          </p>
+          <p className="referral-label">{t("your_invite_code")}</p>
 
           <div className="referral-code-row">
             <h2>{referralCode}</h2>
@@ -197,9 +187,7 @@ export default function Referrals() {
 
           {/* Social Sharing */}
           <div className="referral-share">
-            <span className="share-label">
-              {t("share_via")}
-            </span>
+            <span className="share-label">{t("share_via")}</span>
 
             <button
               type="button"
@@ -259,9 +247,7 @@ export default function Referrals() {
       {/* Invite Activity */}
       <section className="invite-activity">
         <div className="activity-heading">
-          <p className="referrals-eyebrow">
-            {t("recent")}
-          </p>
+          <p className="referrals-eyebrow">{t("recent")}</p>
 
           <h2>{t("invite_activity")}</h2>
         </div>
@@ -270,9 +256,7 @@ export default function Referrals() {
           {inviteActivity.map((invite) => (
             <div className="activity-item" key={invite.id}>
               <div className="activity-user">
-                <div className="activity-avatar">
-                  {invite.initial}
-                </div>
+                <div className="activity-avatar">{invite.initial}</div>
 
                 <div className="activity-user-info">
                   <strong>{invite.email}</strong>
@@ -280,18 +264,14 @@ export default function Referrals() {
                 </div>
               </div>
 
-              <span
-                className={`activity-status ${invite.status}`}
-              >
+              <span className={`activity-status ${invite.status}`}>
                 {t(invite.status)}
               </span>
             </div>
           ))}
         </div>
 
-        <p className="activity-note">
-          {t("referral_activity_privacy_note")}
-        </p>
+        <p className="activity-note">{t("referral_activity_privacy_note")}</p>
       </section>
     </div>
   );

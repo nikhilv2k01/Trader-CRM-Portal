@@ -1,5 +1,4 @@
-
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
 import {
@@ -19,9 +18,7 @@ import {
 const groups = [
   {
     label: "overview",
-    items: [
-      ["dashboard", "/", LayoutDashboard],
-    ],
+    items: [["dashboard", "/", LayoutDashboard]],
   },
   {
     label: "money",
@@ -51,6 +48,7 @@ const groups = [
 
 export default function Sidebar({ mobileOpen, closeMobile }) {
   const { t } = useTranslation();
+  const navigate = useNavigate();
 
   return (
     <>
@@ -72,15 +70,18 @@ export default function Sidebar({ mobileOpen, closeMobile }) {
         >
           <X size={18} />
         </button>
-
-        <div className="user-card">
+        <button
+          type="button"
+          className="user-card"
+          onClick={() => navigate("/profile")}
+        >
           <div className="avatar">D</div>
 
           <div>
             <b>Dana</b>
             <small>{t("client_account_label")}</small>
           </div>
-        </div>
+        </button>
 
         <nav>
           {groups.map((group) => (

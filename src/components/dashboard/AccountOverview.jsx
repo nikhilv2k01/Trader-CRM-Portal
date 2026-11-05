@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import {
@@ -58,11 +57,7 @@ export default function AccountOverview() {
 
           <div>
             <small>{t("unrealised")}</small>
-            <b
-              className={
-                selected.unrealised >= 0 ? "positive" : "negative"
-              }
-            >
+            <b className={selected.unrealised >= 0 ? "positive" : "negative"}>
               {selected.unrealised >= 0 ? "+" : ""}
               {money(selected.unrealised, selected.currency)}
             </b>
@@ -98,13 +93,7 @@ export default function AccountOverview() {
               margin={{ top: 12, right: 8, left: 0, bottom: 0 }}
             >
               <defs>
-                <linearGradient
-                  id="balanceFill"
-                  x1="0"
-                  y1="0"
-                  x2="0"
-                  y2="1"
-                >
+                <linearGradient id="balanceFill" x1="0" y1="0" x2="0" y2="1">
                   <stop offset="0%" stopColor="#078879" stopOpacity={0.28} />
                   <stop offset="100%" stopColor="#078879" stopOpacity={0} />
                 </linearGradient>

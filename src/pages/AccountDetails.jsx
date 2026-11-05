@@ -1,4 +1,3 @@
-
 import { useMemo } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { useTranslation } from "react-i18next";
@@ -29,18 +28,16 @@ export default function AccountDetails() {
   const account = useMemo(
     () =>
       accounts.find(
-        (item) => item.code.toLowerCase() === accountCode?.toLowerCase()
+        (item) => item.code.toLowerCase() === accountCode?.toLowerCase(),
       ),
-    [accountCode]
+    [accountCode],
   );
 
   if (!account) {
     return (
       <div className="panel p-8">
         <h2>{t("account_not_found")}</h2>
-        <p className="muted mt-2">
-          {t("requested_account_not_found")}
-        </p>
+        <p className="muted mt-2">{t("requested_account_not_found")}</p>
         <button
           className="button primary mt-4"
           onClick={() => navigate("/accounts")}
@@ -120,7 +117,7 @@ export default function AccountDetails() {
     (item) =>
       item.id !== account.id &&
       item.currency === account.currency &&
-      item.status === "Live"
+      item.status === "Live",
   );
 
   return (
@@ -136,9 +133,7 @@ export default function AccountDetails() {
 
           <h1>{account.name}</h1>
 
-          <p className="muted">
-            {t("account_details_description")}
-          </p>
+          <p className="muted">{t("account_details_description")}</p>
         </div>
 
         <div className="account-detail-actions">
@@ -296,7 +291,9 @@ export default function AccountDetails() {
               </div>
 
               <div className="recorded-count">
-                <small>{t("recorded_movements_count", { count: 4 }).toUpperCase()}</small>
+                <small>
+                  {t("recorded_movements_count", { count: 4 }).toUpperCase()}
+                </small>
               </div>
             </div>
 
@@ -328,11 +325,7 @@ export default function AccountDetails() {
                     x2="0"
                     y2="1"
                   >
-                    <stop
-                      offset="0%"
-                      stopColor="#18b99f"
-                      stopOpacity="0.25"
-                    />
+                    <stop offset="0%" stopColor="#18b99f" stopOpacity="0.25" />
                     <stop
                       offset="100%"
                       stopColor="#18b99f"
@@ -341,13 +334,7 @@ export default function AccountDetails() {
                   </linearGradient>
                 </defs>
 
-                <line
-                  x1="0"
-                  y1="180"
-                  x2="730"
-                  y2="180"
-                  stroke="#dce6e9"
-                />
+                <line x1="0" y1="180" x2="730" y2="180" stroke="#dce6e9" />
 
                 <line
                   x1="0"
@@ -428,7 +415,7 @@ export default function AccountDetails() {
                             movements
                               .slice(index)
                               .reduce((sum, item) => sum + item.amount, 0),
-                          account.currency
+                          account.currency,
                         )}
                       </small>
                     </div>
@@ -452,9 +439,7 @@ export default function AccountDetails() {
               icon={<CreditCard size={14} />}
               label="platform"
               value={
-                account.platform === "MT5"
-                  ? "MetaTrader 5"
-                  : account.platform
+                account.platform === "MT5" ? "MetaTrader 5" : account.platform
               }
             />
 
@@ -546,9 +531,7 @@ export default function AccountDetails() {
 
             <button
               className="password-button"
-              onClick={() =>
-                alert(t("password_management_coming_soon"))
-              }
+              onClick={() => alert(t("password_management_coming_soon"))}
             >
               <Lock size={14} />
               {t("change_password")}

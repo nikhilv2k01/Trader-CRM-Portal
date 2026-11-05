@@ -162,16 +162,21 @@ const gameTranslationKeys = {
   ADVANCED: "advanced",
   "Market predictor": "market_predictor",
   "Where will EUR/USD finish today?": "eurusd_finish_question",
-  "Choose a direction before the prediction window closes.": "choose_direction_description",
+  "Choose a direction before the prediction window closes.":
+    "choose_direction_description",
   "Bull vs Bear": "bull_vs_bear",
   "What is the next directional move for gold?": "gold_direction_question",
-  "Make one time-boxed prediction. Trading activity is never required.": "time_boxed_prediction_description",
+  "Make one time-boxed prediction. Trading activity is never required.":
+    "time_boxed_prediction_description",
   "Calendar challenge": "calendar_challenge",
-  "Which event has the strongest scheduled market impact?": "strongest_market_impact_question",
-  "Use the broker education calendar and select one event.": "broker_calendar_description",
+  "Which event has the strongest scheduled market impact?":
+    "strongest_market_impact_question",
+  "Use the broker education calendar and select one event.":
+    "broker_calendar_description",
   "Price target": "price_target",
   "Set Friday’s EUR/USD closing target.": "friday_eurusd_target_question",
-  "Closest eligible forecast within the broker tolerance scores.": "closest_forecast_description",
+  "Closest eligible forecast within the broker tolerance scores.":
+    "closest_forecast_description",
   Higher: "higher",
   Lower: "lower",
   Unchanged: "unchanged",
@@ -278,7 +283,9 @@ function PredictionArena({ game, onSelect, onLock }) {
         <div className="arena-reward">
           <div>
             <strong className="reward-value">◆ {game.reward}</strong>
-            <p>+{game.xp} XP {t("if_correct")}</p>
+            <p>
+              +{game.xp} XP {t("if_correct")}
+            </p>
             <p className="lock-note">
               {game.locked
                 ? t("locked_one_entry")
@@ -312,7 +319,9 @@ function PredictionArena({ game, onSelect, onLock }) {
             <div>
               <small>{t("entries_close")}</small>
               <strong>{game.closes}</strong>
-              <span className="countdown">{t("countdown_remaining", { time: "5h 40m" })}</span>
+              <span className="countdown">
+                {t("countdown_remaining", { time: "5h 40m" })}
+              </span>
             </div>
           </div>
 
@@ -347,22 +356,23 @@ function PredictionArena({ game, onSelect, onLock }) {
 
               <div className="split-labels">
                 <div>
-                  {t("higher")}<strong>52%</strong>
+                  {t("higher")}
+                  <strong>52%</strong>
                 </div>
                 <div>
-                  {t("lower")}<strong>31%</strong>
+                  {t("lower")}
+                  <strong>31%</strong>
                 </div>
                 <div>
-                  {t("unchanged")}<strong>17%</strong>
+                  {t("unchanged")}
+                  <strong>17%</strong>
                 </div>
               </div>
 
               <p>{t("entries_counted", { count: 100 })}</p>
             </>
           ) : (
-            <p className="hidden-split">
-              {t("split_hidden_until_locked")}
-            </p>
+            <p className="hidden-split">{t("split_hidden_until_locked")}</p>
           )}
         </div>
       </div>
@@ -438,9 +448,7 @@ function Leaderboard() {
         ))}
       </div>
 
-      <p className="leaderboard-note">
-        {t("leaderboard_privacy_note")}
-      </p>
+      <p className="leaderboard-note">{t("leaderboard_privacy_note")}</p>
     </aside>
   );
 }
@@ -583,7 +591,9 @@ export default function Games() {
               ) : (
                 <div className="username-display">
                   <strong>{username}</strong>
-                  <span className="player-rank">{t("rank_number", { rank: 2 })}</span>
+                  <span className="player-rank">
+                    {t("rank_number", { rank: 2 })}
+                  </span>
                   <button
                     type="button"
                     className="change-username"

@@ -1,4 +1,3 @@
-
 import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import {
@@ -22,12 +21,8 @@ export default function Dashboard() {
       <div className="dashboard-intro">
         <div>
           <p className="eyebrow">{t("your_workspace")}</p>
-          <h1 className="welcome-title">
-            {t("welcome", { name: "Dana" })}
-          </h1>
-          <p className="muted">
-            {t("dashboard_intro_description")}
-          </p>
+          <h1 className="welcome-title">{t("welcome", { name: "Dana" })}</h1>
+          <p className="muted">{t("dashboard_intro_description")}</p>
         </div>
 
         <button

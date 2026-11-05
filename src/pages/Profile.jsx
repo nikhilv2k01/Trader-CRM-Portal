@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
@@ -34,9 +33,7 @@ export default function Profile() {
 
           <h1>Dana</h1>
 
-          <p className="profile-subtitle">
-            {t("profile_page_description")}
-          </p>
+          <p className="profile-subtitle">{t("profile_page_description")}</p>
         </div>
 
         <button
@@ -59,9 +56,7 @@ export default function Profile() {
           </div>
         </div>
 
-        <span className="profile-mfa-badge">
-          {t("multi_factor_on")}
-        </span>
+        <span className="profile-mfa-badge">{t("multi_factor_on")}</span>
       </section>
 
       {/* PROFILE INFORMATION */}
@@ -69,9 +64,7 @@ export default function Profile() {
         {/* CONTACT INFORMATION */}
         <article className="profile-information-card">
           <div className="profile-card-heading">
-            <p className="profile-card-eyebrow">
-              {t("identity")}
-            </p>
+            <p className="profile-card-eyebrow">{t("identity")}</p>
             <h2>{t("contact")}</h2>
           </div>
 
@@ -116,9 +109,7 @@ export default function Profile() {
         {/* SECURITY INFORMATION */}
         <article className="profile-information-card">
           <div className="profile-card-heading">
-            <p className="profile-card-eyebrow">
-              {t("security")}
-            </p>
+            <p className="profile-card-eyebrow">{t("security")}</p>
             <h2>{t("sign_in_protection")}</h2>
           </div>
 
@@ -126,9 +117,7 @@ export default function Profile() {
             <div className="profile-detail-row">
               <span>{t("multi_factor")}</span>
 
-              <strong className="profile-enabled-badge">
-                {t("enabled")}
-              </strong>
+              <strong className="profile-enabled-badge">{t("enabled")}</strong>
             </div>
 
             <div className="profile-detail-row">
@@ -153,9 +142,7 @@ export default function Profile() {
         {/* PREFERENCES */}
         <article className="profile-information-card">
           <div className="profile-card-heading">
-            <p className="profile-card-eyebrow">
-              {t("preferences")}
-            </p>
+            <p className="profile-card-eyebrow">{t("preferences")}</p>
             <h2>{t("what_we_send_you")}</h2>
           </div>
 

@@ -1,4 +1,3 @@
-
 import { useMemo, useState } from "react";
 import {
   ArrowLeftRight,
@@ -62,9 +61,7 @@ export default function Transfer() {
     ? fromAccount.balance - transferAmount
     : 0;
 
-  const afterToBalance = toAccount
-    ? toAccount.balance + transferAmount
-    : 0;
+  const afterToBalance = toAccount ? toAccount.balance + transferAmount : 0;
 
   const eligibleAccounts = useMemo(
     () => accounts.filter((a) => a.currency === fromAccount?.currency),
@@ -122,8 +119,7 @@ export default function Transfer() {
         .filter(
           (account) =>
             account.id !== excludeId &&
-            account.currency ===
-              accounts.find((a) => a.id === value)?.currency,
+            account.currency === accounts.find((a) => a.id === value)?.currency,
         )
         .map((account) => (
           <option key={account.id} value={account.id}>
@@ -135,8 +131,7 @@ export default function Transfer() {
         .filter(
           (account) =>
             account.id !== excludeId &&
-            account.currency !==
-              accounts.find((a) => a.id === value)?.currency,
+            account.currency !== accounts.find((a) => a.id === value)?.currency,
         )
         .map((account) => (
           <option key={account.id} value={account.id} disabled>
@@ -152,9 +147,7 @@ export default function Transfer() {
       <div className="transfer-heading">
         <p className="eyebrow">{t("internal_transfer")}</p>
         <h1>{t("move_funds_between_live_accounts")}</h1>
-        <p className="muted">
-          {t("transfer_page_description")}
-        </p>
+        <p className="muted">{t("transfer_page_description")}</p>
       </div>
 
       {/* Information banner */}
@@ -167,9 +160,7 @@ export default function Transfer() {
           <div>
             <p className="eyebrow">{t("account_to_account")}</p>
             <h3>{t("move_settled_funds_with_preview")}</h3>
-            <p className="muted">
-              {t("transfer_banner_description")}
-            </p>
+            <p className="muted">{t("transfer_banner_description")}</p>
           </div>
         </div>
 
@@ -203,9 +194,7 @@ export default function Transfer() {
               <h2>{t("select_your_route")}</h2>
             </div>
 
-            <span className="demo-label">
-              {t("demonstration")}
-            </span>
+            <span className="demo-label">{t("demonstration")}</span>
           </div>
 
           {/* Steps */}
@@ -296,10 +285,7 @@ export default function Transfer() {
                 <small>{t("current_balance")}</small>
 
                 <strong>
-                  {formatMoney(
-                    toAccount?.balance || 0,
-                    toAccount?.currency,
-                  )}
+                  {formatMoney(toAccount?.balance || 0, toAccount?.currency)}
                 </strong>
               </div>
             </div>
@@ -311,10 +297,7 @@ export default function Transfer() {
               <label>{t("amount_to_transfer")}</label>
 
               <small>
-                {formatMoney(
-                  fromAccount?.balance || 0,
-                  fromAccount?.currency,
-                )}{" "}
+                {formatMoney(fromAccount?.balance || 0, fromAccount?.currency)}{" "}
                 {t("available")}
               </small>
             </div>
@@ -348,9 +331,7 @@ export default function Transfer() {
 
               <button
                 type="button"
-                onClick={() =>
-                  handleAmount(fromAccount?.balance || 0)
-                }
+                onClick={() => handleAmount(fromAccount?.balance || 0)}
               >
                 {t("max")}
               </button>
@@ -402,9 +383,7 @@ export default function Transfer() {
           <div className="summary-amount">
             <small>{t("you_are_moving")}</small>
 
-            <h1>
-              {formatMoney(transferAmount, fromAccount?.currency)}
-            </h1>
+            <h1>{formatMoney(transferAmount, fromAccount?.currency)}</h1>
 
             <p>
               {t("fee")} {formatMoney(fee)}
@@ -416,9 +395,7 @@ export default function Transfer() {
 
             <div>
               <strong>{fromAccount && t(fromAccount.name)}</strong>
-              <b>
-                {formatMoney(afterFromBalance, fromAccount?.currency)}
-              </b>
+              <b>{formatMoney(afterFromBalance, fromAccount?.currency)}</b>
             </div>
           </div>
 
@@ -433,9 +410,7 @@ export default function Transfer() {
 
             <div>
               <strong>{toAccount && t(toAccount.name)}</strong>
-              <b>
-                {formatMoney(afterToBalance, toAccount?.currency)}
-              </b>
+              <b>{formatMoney(afterToBalance, toAccount?.currency)}</b>
             </div>
           </div>
 
@@ -471,9 +446,7 @@ export default function Transfer() {
             </p>
           )}
 
-          <p className="summary-footer">
-            {t("demonstration_transfer_note")}
-          </p>
+          <p className="summary-footer">{t("demonstration_transfer_note")}</p>
         </aside>
       </div>
 

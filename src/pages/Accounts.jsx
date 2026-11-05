@@ -1,4 +1,3 @@
-
 import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { ArrowLeftRight } from "lucide-react";
@@ -133,14 +132,10 @@ export default function Accounts() {
           </button>
         </div>
 
-        <p className="muted catalogue-note">
-          {t("broker_policy_revision")}
-        </p>
+        <p className="muted catalogue-note">{t("broker_policy_revision")}</p>
       </section>
 
-      <p className="accounts-disclaimer">
-        {t("accounts_disclaimer")}
-      </p>
+      <p className="accounts-disclaimer">{t("accounts_disclaimer")}</p>
     </>
   );
 }

@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { useNavigate, useSearchParams } from "react-router-dom";
 import { useTranslation } from "react-i18next";
@@ -8,8 +7,7 @@ export default function OpenAccount() {
   const [searchParams] = useSearchParams();
   const { t } = useTranslation();
 
-  const initialType =
-    searchParams.get("type") === "demo" ? "demo" : "standard";
+  const initialType = searchParams.get("type") === "demo" ? "demo" : "standard";
 
   const [selectedAccount, setSelectedAccount] = useState(initialType);
 
@@ -37,7 +35,7 @@ export default function OpenAccount() {
     alert(
       t("account_request_submitted", {
         account: t(selected.name),
-      })
+      }),
     );
     navigate("/accounts");
   };
@@ -47,9 +45,7 @@ export default function OpenAccount() {
       <div className="open-account-heading">
         <p className="eyebrow">{t("open_account_heading")}</p>
         <h1>{t("choose_account_type")}</h1>
-        <p className="muted">
-          {t("open_account_description")}
-        </p>
+        <p className="muted">{t("open_account_description")}</p>
       </div>
 
       <div className="open-account-layout">
@@ -63,9 +59,7 @@ export default function OpenAccount() {
               }`}
               onClick={() => setSelectedAccount(key)}
             >
-              <span className={`account-badge ${key}`}>
-                {t(account.badge)}
-              </span>
+              <span className={`account-badge ${key}`}>{t(account.badge)}</span>
 
               <h3>{t(account.name)}</h3>
               <p>

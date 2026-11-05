@@ -1,4 +1,3 @@
-
 import { useEffect, useMemo, useRef, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
@@ -42,7 +41,11 @@ const languages = [
   { code: "fr", name: "French", nativeName: "Français" },
   { code: "es", name: "Spanish", nativeName: "Español" },
   { code: "pt", name: "Portuguese", nativeName: "Português" },
-  { code: "pt-BR", name: "Brazilian Portuguese", nativeName: "Português (Brasil)" },
+  {
+    code: "pt-BR",
+    name: "Brazilian Portuguese",
+    nativeName: "Português (Brasil)",
+  },
   { code: "it", name: "Italian", nativeName: "Italiano" },
   { code: "ar", name: "Arabic", nativeName: "العربية" },
   { code: "de", name: "German", nativeName: "Deutsch" },
@@ -221,10 +224,7 @@ export default function Header({ onMenu, dark, onToggleTheme }) {
 
   useEffect(() => {
     const handleOutsideClick = (event) => {
-      if (
-        languageRef.current &&
-        !languageRef.current.contains(event.target)
-      ) {
+      if (languageRef.current && !languageRef.current.contains(event.target)) {
         setLang(false);
       }
 
@@ -268,13 +268,9 @@ export default function Header({ onMenu, dark, onToggleTheme }) {
         className="notification-content"
         onClick={() => handleNotificationClick(notification)}
       >
-        <span className="notification-category">
-          {notification.category}
-        </span>
+        <span className="notification-category">{notification.category}</span>
 
-        <strong className="notification-title">
-          {notification.title}
-        </strong>
+        <strong className="notification-title">{notification.title}</strong>
 
         <span className="notification-description">
           {notification.description}
@@ -316,19 +312,14 @@ export default function Header({ onMenu, dark, onToggleTheme }) {
           >
             <span className="live-dot" />
             {t("demo_snapshot")}
-            <ChevronDown
-              size={12}
-              className={snapshotOpen ? "rotated" : ""}
-            />
+            <ChevronDown size={12} className={snapshotOpen ? "rotated" : ""} />
           </button>
         </div>
 
         <div className="top-actions">
           {/* Theme switch */}
           <button
-            className={`theme-toggle ${
-              dark ? "dark-active" : "light-active"
-            }`}
+            className={`theme-toggle ${dark ? "dark-active" : "light-active"}`}
             onClick={onToggleTheme}
             title={dark ? t("switch_to_light_mode") : t("switch_to_dark_mode")}
             aria-label={
@@ -386,9 +377,7 @@ export default function Header({ onMenu, dark, onToggleTheme }) {
                     type="text"
                     placeholder={t("search_languages")}
                     value={searchLanguage}
-                    onChange={(event) =>
-                      setSearchLanguage(event.target.value)
-                    }
+                    onChange={(event) => setSearchLanguage(event.target.value)}
                     autoComplete="off"
                   />
 
@@ -408,9 +397,11 @@ export default function Header({ onMenu, dark, onToggleTheme }) {
                     filteredLanguages.map((language) => {
                       const isSelected =
                         language.code.toLowerCase() ===
-                        (i18n.resolvedLanguage ||
+                        (
+                          i18n.resolvedLanguage ||
                           i18n.language ||
-                          "en").toLowerCase();
+                          "en"
+                        ).toLowerCase();
 
                       return (
                         <button
@@ -423,9 +414,7 @@ export default function Header({ onMenu, dark, onToggleTheme }) {
                           <span className="language-option-text">
                             <strong>{language.nativeName}</strong>
 
-                            {!isSelected && (
-                              <small>{language.name}</small>
-                            )}
+                            {!isSelected && <small>{language.name}</small>}
                           </span>
 
                           <span className="language-option-right">
@@ -436,10 +425,7 @@ export default function Header({ onMenu, dark, onToggleTheme }) {
                             </span>
 
                             {isSelected && (
-                              <Check
-                                size={18}
-                                className="language-check"
-                              />
+                              <Check size={18} className="language-check" />
                             )}
                           </span>
                         </button>
@@ -511,9 +497,7 @@ export default function Header({ onMenu, dark, onToggleTheme }) {
                   <div className="notification-tabs">
                     <button
                       type="button"
-                      className={
-                        notificationFilter === "all" ? "active" : ""
-                      }
+                      className={notificationFilter === "all" ? "active" : ""}
                       onClick={() => setNotificationFilter("all")}
                     >
                       {t("all")}
@@ -599,7 +583,7 @@ export default function Header({ onMenu, dark, onToggleTheme }) {
           </div>
 
           {/* User profile */}
-          <button className="profile-chip">
+          <button className="profile-chip" onClick={() => navigate("/profile")}>
             <span className="avatar small">D</span>
             <span>
               <b>Dana</b>

@@ -1,4 +1,3 @@
-
 {
   "dashboard": "Dashboard",
   "accounts": "Accounts",
@@ -232,7 +231,7 @@
   "open_now": "OPEN NOW",
   "matches_to_enter": "matches to enter",
   "rank_number": "Rank #{{rank}}",
-   "onboarding_all_set": "You're all set",
+  "onboarding_all_set": "You're all set",
   "onboarding_completion_description": "Every onboarding step is complete. Funding and account opening are available to you.",
   "progress": "PROGRESS",
   "onboarding_progress": "Onboarding progress",

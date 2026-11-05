@@ -375,13 +375,13 @@ export default function Support() {
                   <article
                     key={`${selectedTicket.id}-${index}`}
                     className={`support-message ${
-                      reply.type === "user"
-                        ? "user-message"
-                        : "broker-message"
+                      reply.type === "user" ? "user-message" : "broker-message"
                     }`}
                   >
                     <span className="support-message-author">
-                      {t(authorKeys[reply.author] || reply.author).toUpperCase()}
+                      {t(
+                        authorKeys[reply.author] || reply.author,
+                      ).toUpperCase()}
                     </span>
 
                     <p>
@@ -509,11 +509,7 @@ export default function Support() {
           <span className="support-live-chat-toggle-right">
             <span className="support-chat-online-badge">{t("online")}</span>
 
-            {showLiveChat ? (
-              <ChevronUp size={18} />
-            ) : (
-              <ChevronDown size={18} />
-            )}
+            {showLiveChat ? <ChevronUp size={18} /> : <ChevronDown size={18} />}
           </span>
         </button>
 

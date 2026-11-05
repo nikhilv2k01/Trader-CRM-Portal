@@ -1,4 +1,3 @@
-
 import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { Check, UserRound } from "lucide-react";
@@ -35,9 +34,7 @@ export default function Onboarding() {
     <main className="onboarding-page">
       <section className="onboarding-heading">
         <div>
-          <p className="onboarding-eyebrow">
-            {t("onboarding")}
-          </p>
+          <p className="onboarding-eyebrow">{t("onboarding")}</p>
           <h1>{t("onboarding_all_set")}</h1>
           <p className="onboarding-subtitle">
             {t("onboarding_completion_description")}
@@ -58,9 +55,7 @@ export default function Onboarding() {
         aria-label={t("onboarding_progress")}
       >
         <div className="onboarding-progress-content">
-          <p className="onboarding-section-label">
-            {t("progress")}
-          </p>
+          <p className="onboarding-section-label">{t("progress")}</p>
 
           <h2>
             {t("onboarding_steps_complete", {
@@ -82,9 +77,7 @@ export default function Onboarding() {
             <span style={{ width: `${progress}%` }} />
           </div>
 
-          <p className="onboarding-done-text">
-            {t("all_done")}
-          </p>
+          <p className="onboarding-done-text">{t("all_done")}</p>
         </div>
 
         <div
@@ -112,15 +105,11 @@ export default function Onboarding() {
               <p>{t(step.description)}</p>
 
               {step.note && (
-                <p className="onboarding-step-note">
-                  {t(step.note)}
-                </p>
+                <p className="onboarding-step-note">{t(step.note)}</p>
               )}
             </div>
 
-            <span className="onboarding-complete-pill">
-              {t("complete")}
-            </span>
+            <span className="onboarding-complete-pill">{t("complete")}</span>
           </article>
         ))}
       </section>

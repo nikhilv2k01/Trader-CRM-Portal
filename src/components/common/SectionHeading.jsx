@@ -1,4 +1,3 @@
-
 import { useTranslation } from "react-i18next";
 
 export default function SectionHeading({
@@ -12,16 +11,12 @@ export default function SectionHeading({
   return (
     <div className="section-heading">
       <div>
-        {eyebrow && (
-          <p className="eyebrow">{t(eyebrow)}</p>
-        )}
+        {eyebrow && <p className="eyebrow">{t(eyebrow)}</p>}
 
         <h1 className="page-title">{t(title)}</h1>
 
         {description && (
-          <p className="muted heading-description">
-            {t(description)}
-          </p>
+          <p className="muted heading-description">{t(description)}</p>
         )}
       </div>
 

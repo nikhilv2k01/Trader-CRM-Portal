@@ -1,11 +1,4 @@
-
-import {
-  Clock3,
-  MessageSquare,
-  Trophy,
-  Star,
-  ArrowRight,
-} from "lucide-react";
+import { Clock3, MessageSquare, Trophy, Star, ArrowRight } from "lucide-react";
 
 import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
@@ -85,10 +78,7 @@ export default function DashboardExtras() {
         <div className="extra-card-heading">
           <h3>{t("points_activity")}</h3>
 
-          <button
-            className="text-link"
-            onClick={() => navigate("/statements")}
-          >
+          <button className="text-link" onClick={() => navigate("/statements")}>
             {t("ledger")} <ArrowRight size={13} />
           </button>
         </div>
